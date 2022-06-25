@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms</title>
+        <link rel="icon" type="image/png" href="../Icons/icons8-delivery-truck-60.png">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+            body {
+                font-family: 'Montserrat', sans-serif;
+                background-image: url(../Backgrounds/pexels-roberto-nickson-2559941.jpg);
+                background-size: cover;
+                color: floralwhite;
+            }
+            h1, h2 {
+                text-align: center;
+                color: black;
+            }
+            h1 {
+                background-color:bisque;
+                opacity: 0.6;
+                border: 2px dotted bisque;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 10px;
+            }
+            form {
+                text-align: center;
+            }
+
+            input.button {
+                background-color: lightsalmon;
+                font-weight: bold;
+                border: 2px rgb(61, 61, 1) outset;
+                padding: 10px;
+                border-radius: 15px;
+                font-variant: small-caps;
+                
+            }
+            input.button:hover {
+                background-color: rgb(20, 173, 20);
+                text-decoration: black solid underline;
+            }
+
+            input {
+                margin-bottom: 10px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Shipping details</h1>
+        <h2>Please enter your details</h2>
+        <!--Textbox in HTML forms-->
+        <form action="https://submit-form.com/YgP4dfYx" autocomplete="on" target="_blank">
+            <!--Text in HTML Forms-->
+            <label for="firstname">First name:</label> <br>
+            <input type="text" id="firstname" name="firstname" required placeholder="Enter your first name">
+            <br>
+            <label for="midname">Middle name:</label> <br>
+            <input type="text" id="midname" name="midname" placeholder="Enter your middle name">
+            <br>
+            <label for="lastname">Last name:</label> <br>
+            <input type="text" id="lastname" name="lastname" required placeholder="Enter your last name"> 
+            <!--Input Type Password
+            Input type="password"> defines a password field:-->
+            <br>
+            <label for="password">Password:</label> <br>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" maxlength="15" minlength="8" >
+            <br>
+            <!--Radio buttons-->
+            <!--The <input type="radio"> defines a radio button.
+            Radio buttons let a user select ONE of a limited number of choices.-->
+            <p>Choose your gender:</p>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label> <br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label> <br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            
+            <!--Checkboxes-->
+            <!--Checkboxes let a user select ZERO or MORE options of a limited number of choices.-->
+            <p>Preferred slot/slots</p>
+            <input type="checkbox" id="morning" name="slot">
+            <label for="morning">Morning (8AM-11AM)</label> <br>
+            <input type="checkbox" id="afternoon" name="slot">
+            <label for="afternoon">Afternoon (1PM-4PM)</label> <br>
+            <input type="checkbox" id="evening" name="slot">
+            <label for="evening">Evening (6PM-9PM)</label> <br>
+            <input type="checkbox" id="no" name="slot">
+            <label for="no">No preference</label>  
+            
+            <!--Combobox in HTML (drop-down menu)-->
+            <!--Combobox is used to create a drop-down menu in your form which contains multiple options.
+            So, to create an Combobox in an HTML form, we use the <select> tag with <option> tag.
+            It is also known as a drop-down menu. -->
+            <p>Select your state</p>
+            <select name="states">
+                <option>--None--</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunanchal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chattisgarh</option>
+                <option>Goa</option>
+                <option>Kerala</option>
+                <option>Maharashtra</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>West Bengal</option>
+                <option>Other</option> <br>
+                
+            </select>
+            <br> 
+                <br>
+               <label for="other">Other:</label> <br>
+               <input type="text" id="other" name="ot" placeholder="Enter your state">
+            <br>
+        
+            <!--Date-->
+            <!--Input Type Date
+            The <input type="date"> is used for input fields that should contain a date.
+
+            Depending on browser support, a date picker can show up in the input field.-->
+            <label for="date">When is your birthday?</label> <br>
+            <input type="date" id="date" name="birthday" required placeholder="Enter your birthday" max="2005-12-31" min="1975-12-31">
+            <br>
+            <!--Email-->
+            <!--The <input type="email"> is used for input fields that should contain an e-mail address.
+
+            Depending on browser support, the e-mail address can be automatically validated when submitted.-->
+            <br>
+            <label for="email">Enter your email:</label> <br>
+            <input type="email" id="email" name="email" required multiple>
+
+            <br>
+            <br>
+            <!--Tel-->
+            <!--The <input type="tel"> is used for input fields that should contain a telephone number.-->
+            <label for="tel">Enter your phone number</label> <br>
+            <input type="tel" id="tel" name="phone" required multiple>
+            <br>
+            <!--Time-->
+            <!--The <input type="time"> allows the user to select a time (no time zone).
+
+            Depending on browser support, a time picker can show up in the input field-->
+            <label for="time">When can we contact you (most preferred)?</label> <br>
+            <input type="time" id="time" name="time" required>
+            <br>
+
+            <!--TextArea-->
+            <!--In the HTML form, a text area is used to add comments or reviews, or addresses in the form. Or in other words, the text area is a multi-line text input control.
+                 It contains an unlimited number of characters, and the text renders in a fixed-width font and the size of the text area is given by the <rows> and <cols> attributes.
+                 To create a text area in the form use the <textarea> tag.-->
+            <br>
+            <label for="address">Enter your address:</label> <br>
+            <textarea id="address" name="address" rows="8" cols="20">
+             
+            </textarea>
+
+            <br>
+            <label for="specialnotes">Any special instructions?</label> <br>
+            <textarea id="specialnotes" name="specialnotes" rows="4" cols="20">
+
+            </textarea>
+            <br>
+
+            
+
+            <!--Numbers-->
+            <!--The <input type="number"> defines a numeric input field.
+
+            You can also set restrictions on what numbers are accepted.-->
+            <!--Restrictions-->
+            <!--disabled	Specifies that an input field should be disabled
+            max	Specifies the maximum value for an input field
+            maxlength	Specifies the maximum number of character for an input field
+            min	Specifies the minimum value for an input field
+            pattern	Specifies a regular expression to check the input value against-->
+            <!--required	Specifies that an input field is required (must be filled out)
+            size	Specifies the width (in characters) of an input field
+            step	Specifies the legal number intervals for an input field
+            value	Specifies the default value for an input field-->
+            <label for="quantity">Quantity required:</label> 
+            <input type="number" id="quantity" name="qnty" min="2" max="6">
+
+            <br>
+            <!--Datetime-->
+            <!--Input Type Datetime-local
+            The <input type="datetime-local"> specifies a date and time input field, with no time zone.
+
+            Depending on browser support, a date picker can show up in the input field.-->
+            <br>
+            <label for="datetime">Preferred delivery date and time?</label> <br>
+            <input type="datetime-local" id="datetime" name="datetime">
+
+            <br>
+        
+            <!--Input type file-->
+            <!--The <input type="file"> defines a file-select field and a "Browse" button for file uploads.-->
+            <label for="file">Any customization?</label> <br>
+            <input type="file" id="file" name="file" multiple> 
+            <br>
+            <p><small>o select multiple files, hold down the CTRL or SHIFT key while selecting.</small></p>
+            <br>
+            <!--Add URL-->
+            <label for="url">Add URL, if any?</label> <br>
+            <input type="url" id="url" name="url">
+            <br>
+            <!--Color-->
+            <!--Input type color-->
+            <!--The <input type="color"> is used for input fields that should contain a color-->
+            <p>Last but not least, you have the option to customize your package's color!</p>
+            <p><small>You can choose to opt out of it</small></p>
+            
+            <input type="radio" id="colororno" name="colororno"> 
+            <label for="colororno">Color</label> <br>
+            <input type="radio" id="colororno2" name="colororno"> 
+            <label for="colororno2">No color</label> <br>
+
+            <br>
+            <label for="color">Choose your color:</label> <br>
+            <input type="color" id="color" name="color"> 
+            <br>
+            <!--Submit button-->
+            <input type="submit" value="Submit Form" class="button">
+    
+            <!--Reset button-->
+            <!--defines a reset button that will reset all form values to their default values:-->
+            <input type="reset" class="button">
+            
+        </form>
+
+    </body>
+</html>
+
+<!--the HTML <form> element is used to create an HTML form for user input:
+Syntax
+<form>
+.
+form elements
+.
+</form>
+The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.-->
+<!--</form>
+<form>
+<label for="firstname">First Name:</label> <br>
+<input type="text" id="firstname" name="firstname"> <br>
+<label for="lastname">Last name:</label> <br>
+<input type="text" id="lastname" name="lastname">
+<br>
+<label for="midname">Middle name:</label> <br>
+<input type="text" id="midname" name="midname">
+</form>-->
+
+<!--The <label> Element
+Notice the use of the <label> element in the example above.
+
+The <label> tag defines a label for many form elements.
+
+The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+The <label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+
+The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.-->
+
+<!--Elements of HTML <form>
+These are the following HTML <form> elements:
+
+<label>: It defines label for <form> elements.
+<input>: It is used to get input data from the form in various type such as text, password, email, etc by changing it’s type.
+<button>: It defines a clickable button to control other elements or execute a functionality.
+<select>: It is used to create a drop-down list.
+<textarea>: It is used to get input long text content.
+<fieldset>: It is used to draws a box around other form elements and group the related data.
+<legend>: It defines caption for fieldset elements.
+<datalist>: It is used to specify pre-defined list options for input controls.
+<output>: It display the output of performed calculations.
+<option>: It is used to define option in drop-down list.
+<optgroup>: It used to defines group related options in a drop down list.-->
